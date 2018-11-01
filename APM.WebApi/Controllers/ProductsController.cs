@@ -2,9 +2,11 @@
 using APM.WebAPI.Models;
 using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APM.WebApi.Controllers
 {
+    [EnableCorsAttribute("http://localhost:64351", "*", "*")]
     public class ProductsController : ApiController
     {
         // GET: api/Products
