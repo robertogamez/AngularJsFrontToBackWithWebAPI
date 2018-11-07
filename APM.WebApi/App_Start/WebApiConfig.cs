@@ -21,9 +21,14 @@ namespace APM.WebApi
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver
                 = new CamelCasePropertyNamesContractResolver();
 
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{search}",
+            //    defaults: new { search = RouteParameter.Optional }
+            //);
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{search}",
+                routeTemplate: "api/{controller}/{id}",
                 defaults: new { search = RouteParameter.Optional }
             );
         }
