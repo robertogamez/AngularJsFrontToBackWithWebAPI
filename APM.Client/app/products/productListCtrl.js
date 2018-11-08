@@ -25,10 +25,7 @@
         //    vm.products = data;
         //});
 
-        productResource.query({
-            $filter: "Price ge 5 and Price le 20",
-            $orderBy: "Price desc"
-        }, function (data) {
+        productResource.query(function (data) {
             vm.products = data;
         });
     }

@@ -44,7 +44,7 @@ namespace APM.WebApi.Controllers
             return product;
         }
 
-        public void Ppst([FromBody]Product product)
+        public void Post([FromBody]Product product)
         {
             var productRepository = new ProductRepository();
             var newProduct = productRepository.Save(product);
